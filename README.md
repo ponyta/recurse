@@ -2,6 +2,8 @@
 
 Because why not.
 
+These are pretty fun tbh :)
+
 ## Instructions
 
 ### Tic Tac Toe game
