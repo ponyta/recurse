@@ -1,0 +1,34 @@
+We review applications on a rolling basis. You should receive a confirmation email immediately after you apply, and we will review your application within three weeks.
+
+In general, clear and concise answers are better than long ones. Most answers have a 1500 character max length, but you don't need to write that much.
+
+Please include any that you have: GitHub, LinkedIn, personal web site, etc.
+https://github.com/ponyta/
+www.linkedin.com/in/chun-li-bba50763
+<EDIT BEFORE> chunli.me
+
+Code CracklePop
+Write a program that prints out the numbers 1 to 100 (inclusive). If the number is divisible by 3, print Crackle instead of the number. If it's divisible by 5, print Pop. If it's divisible by both 3 and 5, print CracklePop. You can use any language.
+
+Please link to a program you've written from scratch.
+You can use something like GitHub's gist to host your code. It doesn't need to be long, but it should be something you've written yourself, and not using a framework (e.g., Rails). If you don't have anything to submit, code something small, like a game of tic-tac-toe.
+
+What is the most fascinating thing you've learned in the past month?
+This doesn't have to be about programming.
+
+
+What do you want to be doing in two years?
+
+Why do you want to attend the Recurse Center?
+
+What would you like to work on at the Recurse Center?
+E.g., things you want to learn or understand better, projects you want to build or contribute to, etc.
+
+Describe your programming background in a few sentences.
+
+Have you worked professionally as a programmer?
+If so, please describe your experience.
+
+Do you have a Computer Science degree or are you seeking one?
+
+How did you hear about RC?
