@@ -1,34 +1,119 @@
-We review applications on a rolling basis. You should receive a confirmation email immediately after you apply, and we will review your application within three weeks.
+We review applications on a rolling basis. You should receive
+a confirmation email immediately after you apply, and we will review your
+application within three weeks.
 
-In general, clear and concise answers are better than long ones. Most answers have a 1500 character max length, but you don't need to write that much.
+In general, clear and concise answers are better than long ones. Most
+answers have a 1500 character max length, but you don't need to write that
+much.
+
 
 Please include any that you have: GitHub, LinkedIn, personal web site, etc.
+
 https://github.com/ponyta/
+git.chunli.me
 www.linkedin.com/in/chun-li-bba50763
-<EDIT BEFORE> chunli.me
+
 
 Code CracklePop
-Write a program that prints out the numbers 1 to 100 (inclusive). If the number is divisible by 3, print Crackle instead of the number. If it's divisible by 5, print Pop. If it's divisible by both 3 and 5, print CracklePop. You can use any language.
+Write a program that prints out the numbers 1 to 100 (inclusive). If the
+number is divisible by 3, print Crackle instead of the number. If it's
+divisible by 5, print Pop. If it's divisible by both 3 and 5, print
+CracklePop. You can use any language.
 
-Please link to a program you've written from scratch.
-You can use something like GitHub's gist to host your code. It doesn't need to be long, but it should be something you've written yourself, and not using a framework (e.g., Rails). If you don't have anything to submit, code something small, like a game of tic-tac-toe.
+#!/usr/bin/env python3
+
+for i in range(1, 101):
+    if i%3 == 0 and i%5 == 0:
+        print("CracklePop")
+    elif i%3 == 0:
+        print("Crackle")
+    elif i%5 == 0:
+        print("Pop")
+    else:
+        print(i)
+
+
+Please link to a program you've written from scratch. You can use
+something like GitHub's gist to host your code. It doesn't need to be
+long, but it should be something you've written yourself, and not using
+a framework (e.g., Rails). If you don't have anything to submit, code
+something small, like a game of tic-tac-toe.
+
+A simple implementation of Conway's Game of Life in JavaScript:
+
+https://gist.github.com/ponyta/0bebabce3cc781d10baf2571f3912e0e
+
+A demo is available at https://chunli.me/life/, and the source can also be
+found at https://git.chunli.me/life.git/tree/
+
 
 What is the most fascinating thing you've learned in the past month?
 This doesn't have to be about programming.
 
+I read about how Postgres uses MVCC to maintain consistency and implement
+transactions. I also learned about how Postgres table and row locks work,
+and the effects some common database operations have with respect to
+locking.
+
 
 What do you want to be doing in two years?
 
+I want to be building software with nice people, and continue
+self-educating myself on computer science. Also I want to hang out with my
+cat.
+
+
 Why do you want to attend the Recurse Center?
 
-What would you like to work on at the Recurse Center?
-E.g., things you want to learn or understand better, projects you want to build or contribute to, etc.
+I have always enjoyed learning, and the Recurse Center sounds like a great
+place for me to meet like-minded people and learn from them.
+
+I also want to be able to dedicate my time to learning for 3 months;
+although I enjoy building software, I also like to read and learn, which
+is often difficult while working 8 hours a day. For example, although
+I was quite interested in learning more about the Postgres database system
+and contributing a patch, I couldn't find the time while working.
+
+
+What would you like to work on at the Recurse Center? E.g., things you
+want to learn or understand better, projects you want to build or
+contribute to, etc.
+
+Learning more about how Postgres works and contributing to the Postgres
+codebase.
+
+I would also like to finish off some books, such as "Writing an
+Interpreter In Go", and write a basic interpreter. I would also like to
+finish "Structure and Interpretation of Computer Programs".
+
 
 Describe your programming background in a few sentences.
 
-Have you worked professionally as a programmer?
-If so, please describe your experience.
+I studied Computer Science in University, and have worked mainly as
+a Software Engineer at various companies. Professionally, I have the most
+experience as a back-end engineer, usually writing Java applications.
+
+
+Have you worked professionally as a programmer? If so, please describe
+your experience.
+
+Yes. I have had multiple internships as a Software Engineer at companies such
+as Reflektion (San Mateo, CA) and Yext (New York). I also have over a year
+of experience working full-time as a software engineer at BiblioCommons
+(Toronto).
+
+My experience is mostly in back-end applications (often Java), utilizing
+tools such as Spring for DI, and Hibernate. I have also done some
+front-end work using jQuery and Sass.
+
 
 Do you have a Computer Science degree or are you seeking one?
 
+Yes, I have a Bachelor's of Computer Science from the University of
+Waterloo.
+
+
 How did you hear about RC?
+
+I have read about RC from Julia Evan's blog (https://jvns.ca/), as well as
+numerous posts on the lobste.rs community (https://lobste.rs/).
