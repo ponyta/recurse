@@ -4,9 +4,12 @@ from enum import Enum, auto
 
 # Represents an AST Node
 class Node:
-    def __init__(self, key, children):
+    def __init__(self, key, children=None):
         self.key = key
         self.children = children
+
+    def __str__(self):
+        return str(self.key) + "[ " + ",".join(map(str, self.children)) + " ]"
 
 class TokenType(Enum):
     OPEN_PAREN = auto()
@@ -79,12 +82,35 @@ def tokenize(string):
         i += 1
     return tokens
 
-# turns a list of tokens into an AST
-def parse(tokens):
+"""
+My basic LISP language
+
+s-expr  ->  atom
+        |   OPEN_PAREN FUNCTION {s-expr} CLOSE_PAREN
+atom    ->  NUMBER
+
+"""
+def parse_sexpr(tokens):
+    print("parsing sexp for: ", tokens)
+    if len(tokens) == 0:
+        raise AssertionError("Expected tokens, not nothing")
     if tokens[0].type is TokenType.OPEN_PAREN:
+        if len(tokens) < 3:
+            raise AssertionError("Failed to parse s-expr rule for tokens: " + str(tokens))
         if tokens[1].type is not TokenType.FUNCTION:
             raise AssertionError("Expected token with type FUNCTION, got " + str(tokens[1]) + " instead.")
-
+        tokens.pop(0) # pop the open paren
+        parent = Node(tokens.pop(0))
+        children = []
+        while tokens[0].type is not TokenType.CLOSE_PAREN:
+            children.append(parse_sexpr(tokens))
+        parent.children = children
+        tokens.pop(0) # pop off the close paren
+        return parent
+    elif tokens[0].type is TokenType.NUMBER:
+        return tokens.pop(0) # an atomic token is a node in an AST
+    else:
+        raise AssertionError("Could not parse tokens: " + str(tokens))
 
 test = "(first (list 1 (+ 2 34) 9))"
-print(parse(tokenize(test)))
+print(parse_sexpr(tokenize(test)))
