@@ -68,30 +68,42 @@ Why do you want to attend the Recurse Center?
 I have always enjoyed learning, and the Recurse Center sounds like a great
 place for me to meet like-minded people and learn from them.
 
-I also want to be able to dedicate my time to learning for 3 months;
+I also want to have dedicated time to learning for 3 months;
 although I enjoy building software, I also like to read and learn, which
 is often difficult while working 8 hours a day. For example, although
 I was quite interested in learning more about the Postgres database system
 and contributing a patch, I couldn't find the time while working.
+
+Finally, I think the Recurse Center community would provide me with lots
+of great opportunities to learn from new friends, collaberate with others,
+and find inspiration. Having friends I can ask questions when I'm stuck on
+a topic, or just collaberate and discuss with would be extremely valuable
+to me.
 
 
 What would you like to work on at the Recurse Center? E.g., things you
 want to learn or understand better, projects you want to build or
 contribute to, etc.
 
-Learning more about how Postgres works and contributing to the Postgres
-codebase.
+One thing I would like to work on is learn more about how Postgres works
+and contributing to the Postgres codebase. I have read a lot of articles
+on Postgres internals, such as how MVCC works, locking, and performance
+because I find that it pretty accessibile and interesting.
 
-I would also like to finish off some books, such as "Writing an
-Interpreter In Go", and write a basic interpreter. I would also like to
-finish "Structure and Interpretation of Computer Programs".
+I would also like to finish off some books. I have been trying to learn
+more about compilers, so I wanted to finish "Writing an Interpreter in
+Go", and write a basic interpreter. I have also been interested in
+functional programming, and would like to finish "Structure and
+Interpretation of Computer Programs" (as well as write a basic LISP
+compiler).
 
 
 Describe your programming background in a few sentences.
 
-I studied Computer Science in University, and have worked mainly as
+I studied Computer Science in University, and I have worked mainly as
 a Software Engineer at various companies. Professionally, I have the most
-experience as a back-end engineer, usually writing Java applications.
+experience working on back-end components, usually writing Java
+applications.
 
 
 Have you worked professionally as a programmer? If so, please describe
@@ -103,17 +115,17 @@ of experience working full-time as a software engineer at BiblioCommons
 (Toronto).
 
 My experience is mostly in back-end applications (often Java), utilizing
-tools such as Spring for DI, and Hibernate. I have also done some
+tools such as Spring for DI and Hibernate. I have also done some
 front-end work using jQuery and Sass.
 
 
 Do you have a Computer Science degree or are you seeking one?
 
-Yes, I have a Bachelor's of Computer Science from the University of
-Waterloo.
+Yes, I have a Bachelor's Degree in Computer Science from the University
+of Waterloo.
 
 
 How did you hear about RC?
 
-I have read about RC from Julia Evan's blog (https://jvns.ca/), as well as
+I read about RC from Julia Evan's blog (https://jvns.ca/), as well as
 numerous posts on the lobste.rs community (https://lobste.rs/).
