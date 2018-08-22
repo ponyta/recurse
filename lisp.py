@@ -9,6 +9,8 @@ class Node:
         self.children = children
 
     def __str__(self):
+        if self.children is None:
+            return str(self.key) + "[]"
         return str(self.key) + "[ " + ",".join(map(str, self.children)) + " ]"
 
 class TokenType(Enum):
@@ -30,9 +32,9 @@ class Token:
             self.value = value
 
     def __str__(self):
-        return self.type.name + " " + self.value
+        return self.type.name + " " + str(self.value)
     def __repr__(self):
-        return self.type.name + " " + self.value
+        return self.type.name + " " + str(self.value)
 
 def is_whitespace(char):
     if char is '\t' or char is '\n' or char is ' ':
@@ -69,9 +71,9 @@ def tokenize(string):
             tokens.append(Token(TokenType.CLOSE_PAREN))
         elif is_number(string[i]):
             num_start = i
-            while is_number(string[i]):
+            while i < len(string) and is_number(string[i]):
                 i += 1
-            tokens.append(Token(TokenType.NUMBER, string[num_start:i]))
+            tokens.append(Token(TokenType.NUMBER, int(string[num_start:i])))
             i -= 1
         elif is_letter(string[i]):
             id_start = i
@@ -91,7 +93,7 @@ atom    ->  NUMBER
 
 """
 def parse_sexpr(tokens):
-    print("parsing sexp for: ", tokens)
+    # print("parsing sexp for: ", tokens)
     if len(tokens) == 0:
         raise AssertionError("Expected tokens, not nothing")
     if tokens[0].type is TokenType.OPEN_PAREN:
@@ -108,9 +110,28 @@ def parse_sexpr(tokens):
         tokens.pop(0) # pop off the close paren
         return parent
     elif tokens[0].type is TokenType.NUMBER:
-        return tokens.pop(0) # an atomic token is a node in an AST
+        return Node(tokens.pop(0))
     else:
         raise AssertionError("Could not parse tokens: " + str(tokens))
 
-test = "(first (list 1 (+ 2 34) 9))"
-print(parse_sexpr(tokenize(test)))
+def evaluate_ast(node):
+    token = node.key
+    print("evaluating", token)
+    if token.type is TokenType.NUMBER:
+        return token.value
+    elif token.type is TokenType.FUNCTION:
+        if token.value == "+":
+            acc = 0
+            for child in node.children:
+                print(child)
+                acc += evaluate_ast(child)
+            return acc
+        else:
+            raise AssertionError("Unknown function name " + node.key)
+
+test = "(+ (+ 1 (+ 2 34) 9))"
+test = "(+ 1 2 3 4 5)"
+# print(tokenize(test))
+ast = parse_sexpr(tokenize(test))
+print(ast)
+print(evaluate_ast(ast))
